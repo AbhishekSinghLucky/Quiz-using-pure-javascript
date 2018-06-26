@@ -1,0 +1,102 @@
+<html>
+    <head><title>QUIZ 2</title></head>
+    <body>
+        <ol>
+            <li>
+                <h3><i>Question 1</i></h3>
+                <input type="radio" id="q1a1" name ="q1o" value="A" class="ques1">Option 1<br>
+                <input type="radio" id="q1a2" name ="q1o" value="B" class="ques1">Option 2<br>
+                <input type="radio" id="q1a3" name ="q1o" value="C" class="ques1">Option 3<br>
+                <input type="radio" id="q1a4" name ="q1o" value="D" class="ques1">Option 4<br>
+            </li>
+               <li>
+                <h3><i>Question 2</i></h3>
+                <input type="radio" id="q2a1" name ="q2o" value="A" class="ques1">Option 1<br>
+                <input type="radio" id="q2a2" name ="q2o" value="B" class="ques1">Option 2<br>
+                <input type="radio" id="q2a3" name ="q2o" value="C" class="ques1">Option 3<br>
+                <input type="radio" id="q2a4" name ="q2o" value="D" class="ques1">Option 4<br>
+            </li>
+               <li>
+                <h3><i>Question 3</i></h3>
+                <input type="radio" id="q3a1" name="q3o" value="A" class="ques1">Option 1<br>
+                <input type="radio" id="q3a2" name="q3o" value="B" class="ques1">Option 2<br>
+                <input type="radio" id="q3a3" name="q3o" value="C" class="ques1">Option 3<br>
+                <input type="radio" id="q3a4" name="q3o" value="D" class="ques1">Option 4<br><br>
+            </li>
+            <button type="button" onclick="myfunction_submit()">Submit</button>
+        </ol>
+        <script>
+            var b,c,d;  
+            var unattempt=0;
+            var rightAnswer=0;
+            var wrongAnswer=0;
+            var totalQuestion=3;
+        function myfunction_submit(){
+          
+            var a= document.getElementsByName("q1o"); console.log(a);
+            for(var i=0; i < a.length;i++)
+                {
+                    if(a[i].checked) {
+                            b=a[i].value;
+                            console.log(b);
+                            if(b=='A')
+                                {
+                                    rightAnswer++;
+                                }
+                            if(b!='A')
+                                {
+                                    wrongAnswer++;
+                                }
+                    }
+                }if(b== undefined)
+                        {
+                            unattempt++;
+                        }
+            //************************************
+              var e= document.getElementsByName("q2o"); console.log(e);
+            for(var i=0; i < e.length;i++)
+                {
+                    if(e[i].checked){
+                            c=e[i].value;
+                            console.log(c);
+                            if(c=='B')
+                                {
+                                    rightAnswer++;
+                                }
+                            if(c!='B'){
+                                wrongAnswer++;
+                            }
+                        }
+                }if(c== undefined)
+                        {
+                            unattempt++;
+                        }
+            //***********************************
+            var f= document.getElementsByName("q3o"); console.log(f);
+            for(var i=0; i < f.length;i++)
+                {
+                    if(f[i].checked) {
+                            d=f[i].value;
+                            console.log(d);
+                            if(d=='C')
+                                {
+                                    rightAnswer++;
+                                }
+                            if(d!='C')
+                                {
+                                    wrongAnswer++;
+                                }
+                    }
+                }if(d== undefined)
+                        {
+                            unattempt++;
+                        }
+            var attempt= rightAnswer+ wrongAnswer;
+            document.write("Correct Answer = "+rightAnswer+"<br>");
+            document.write("InCorrect Answer = "+wrongAnswer+"<br>");
+            document.write("Questions Attempted = "+attempt+"<br>");
+            document.write("Questions Unattempted = "+unattempt+"<br>");
+            }
+        </script>
+    </body>
+</html>
