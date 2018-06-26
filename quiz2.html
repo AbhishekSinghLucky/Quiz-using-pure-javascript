@@ -1,0 +1,182 @@
+<html>
+    <head><title>Quiz</title></head>
+    <body>
+        <center><h1>General Knowledge Quiz</h1></center>
+
+        <ol>
+        <li>
+            <h4>Question 1</h4>
+            <input type="radio" name="q1a" value="A" id="q1a1" class="ques1" onclick="question1answer(1)">Option 1<br>
+            <input type="radio" name="q1a" value="B" id="q1a2" class="ques1" onclick="question1answer(2)">Option 2<br>
+            <input type="radio" name="q1a" value="C" id="q1a3" class="ques1" onclick="question1answer(3)">Option 3<br>
+            <input type="radio" name="q1a" value="D" id="q1a4" class="ques1" onclick="question1answer(4)">Option 4<br>
+            </li>
+
+            <li>
+            <h4>Question 2</h4>
+            <input type="radio" name="q2a" value="A" id="q2a1" class = "ques2" onclick="question2answer(1)">Option 1<br>
+            <input type="radio" name="q2a" value="B" id="q2a2" class = "ques2" onclick="question2answer(2)">Option 2<br>
+            <input type="radio" name="q2a" value="C" id="q2a3" class = "ques2" onclick="question2answer(3)">Option 3<br>
+            <input type="radio" name="q2a" value="D" id="q2a4" class = "ques2" onclick="question2answer(4)">Option 4<br>
+            </li> 
+             <li>
+            <h4>Question 3</h4>
+            <input type="radio" name="q3a" value="A" id="q3a1" onclick="question3answer(1)">Option 1<br>
+            <input type="radio" name="q3a" value="B" id="q3a2" onclick="question3answer(2)">Option 2<br>
+            <input type="radio" name="q3a" value="C" id="q3a3" onclick="question3answer(3)">Option 3<br>
+            <input type="radio" name="q3a" value="D" id="q3a4" onclick="question3answer(4)">Option 4<br>
+            </li>
+             <li>
+            <h4>Question 4</h4>
+            <input type="radio" name="q4a" value="A" id="q4a1" onclick="question4answer(1)">Option 1<br>
+            <input type="radio" name="q4a" value="B" id="q4a2" onclick="question4answer(2)">Option 2<br>
+            <input type="radio" name="q4a" value="C" id="q4a3" onclick="question4answer(3)">Option 3<br>
+            <input type="radio" name="q4a" value="D" id="q4a4" onclick="question4answer(4)">Option 4<br>
+            </li>
+             <li>
+            <h4>Question 5</h4>
+            <input type="radio" name="q5a" value="A" id="q5a1" onclick="question5answer(1)">Option 1<br>
+            <input type="radio" name="q5a" value="B" id="q5a2" onclick="question5answer(2)">Option 2<br>
+            <input type="radio" name="q5a" value="C" id="q5a3" onclick="question5answer(3)">Option 3<br>
+            <input type="radio" name="q5a" value="D" id="q5a4" onclick="question5answer(4)">Option 4<br>
+            </li>
+        </ol>
+        <button type="button"  onclick="myfunction_submit()">Submit</button>
+
+        <script>
+            var rightAnswer=0;
+            var wrongAnswer=0;
+            var unattempt=0;
+            var a;
+            var b;
+            var c;
+            var d;
+            var e;
+            
+            function question1answer(opt){
+                a= opt;
+                console.log(a);
+            }
+            function question2answer(opt){
+                 b= opt;
+                console.log(b);
+            }
+            function question3answer(opt){
+                 c= opt;
+                console.log(c);
+            }
+            function question4answer(opt){
+                 d= opt;
+                console.log(d);
+            }
+            function question5answer(opt){
+                 e= opt;
+                console.log(e);
+            }
+            
+           function myfunction_submit()
+                    {
+                        if(a==1){
+                            rightAnswer++;
+                        }
+                        if(a == undefined){
+                            unattempt++;
+                        }
+                        if(a!= 1 && a!=undefined ){
+                            wrongAnswer++;
+                        }
+                        //********
+                        if(b==2){
+                            rightAnswer++;
+                        }
+                        if(b == undefined){
+                            unattempt++;
+                        }
+                        if(b!= 2 && b!=undefined ){
+                            wrongAnswer++;
+                        }
+                         //********
+                        if(c==3){
+                            rightAnswer++;
+                        }
+                        if(c == undefined){
+                            unattempt++;
+                        }
+                        if(c!= 3 && c!=undefined ){
+                            wrongAnswer++;
+                        }
+                         //********
+                        if(d==4){
+                            rightAnswer++;
+                        }
+                        if(d == undefined){
+                            unattempt++;
+                        }
+                        if(d!= 4 && d!=undefined ){
+                            wrongAnswer++;
+                        }
+                         //********
+                        if(e==1){
+                            rightAnswer++;
+                        }
+                        if(e == undefined){
+                            unattempt++;
+                        }
+                        if(e!= 1 && e!=undefined ){
+                            wrongAnswer++;
+                        }
+
+                var attempt= rightAnswer+wrongAnswer;
+                        
+                document.write("Total Number of Questions = 4" + "<br>");
+                document.write("Correct Answers = "+rightAnswer +"<br>");
+                document.write("Incorrect Answers = "+ wrongAnswer+"<br>");
+                document.write("Questions Unattempted = "+ unattempt+"<br>"); 
+                document.write("Questions Attempted = "+ attempt+"<br>");        
+//                var attemp= rightAnswer+wrongAnswer;
+//                document.write("Questions Attempted = "+ attemp + "<br>");
+//                var unattemp= 4 - attemp;
+//                document.write("Questions Unattempted = "+ unattemp);
+                                
+            }
+//            
+        </script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
